@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rain Question</title>
+</head>
+<body>
+	<p>What is the weather?</p>
+	<input id="weather"/>
+	<button id="button">Click Me!</button>
+
+	<script type="text/javascript">
+
+	document.getElementById("button").onclick = function(){
+
+		if(document.getElementById("weather").value==="rain"){
+			alert("It's raining");
+		}else{
+			alert("It's not raining");
+		}
+	}
+
+	</script>
+</body>
+</html>
