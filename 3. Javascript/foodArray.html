@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Array</title>
+</head>
+<body>	
+	<p>What's your favourite food?</p>
+	<p id="food"></p>
+
+
+	<script type="text/javascript">
+
+	myArray = ["pizza", "chocolate", "crisps"]
+	myString = "";
+
+	for(i=0; i<myArray.length; i++){
+		myString = myString + myArray[i] + ", ";
+	}
+
+	document.getElementById("food").innerHTML = myString;
+
+	</script>
+</body>
+</html>
