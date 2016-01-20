@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computer guesss</title>
+</head>
+<body>	
+	<h1>The computer will guess how many finger you are holding up</h1>
+	<input	id="myNumber"/>
+	<button id="guess">Guess away!</button>
+
+
+	<script type="text/javascript">
+
+	
+
+	document.getElementById("guess").onclick = function(){
+
+		var guesses=1; var gotit = false; var x;
+
+
+		while(gotit==false){
+			x = Math.floor(Math.random()*6);
+			//alert(x);
+
+			if(document.getElementById("myNumber").value == x){
+				gotit = true;
+			}
+			else{
+				guesses++;
+			}
+
+		}
+		alert("Got it! it was " + x + ". It took me " + guesses + " guesses.");
+	}
+
+
+	</script>
+</body>
+</html>
