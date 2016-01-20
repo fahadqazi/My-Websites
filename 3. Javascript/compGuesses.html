@@ -18,9 +18,8 @@
 		var guesses=1; var gotit = false; var x;
 
 
-		while(gotit==false){
+		while(!gotit){
 			x = Math.floor(Math.random()*6);
-			//alert(x);
 
 			if(document.getElementById("myNumber").value == x){
 				gotit = true;
