@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Box Content change</title>
+
+</head>
+<body>
+	<button id="textChanger">Click me!</button>
+	<input id="input" type="text"/>
+	<div id="firstdiv" >This is some text</div>
+
+
+
+	<script type="text/javascript">
+
+	//var newText = document.getElementById("input").value;
+
+	document.getElementById("textChanger").onclick = function(){
+
+		newText = document.getElementById("input").value;
+
+		document.getElementById("firstdiv").innerHTML = newText;
+	}
+
+
+	</script>
+</body>
+</html>

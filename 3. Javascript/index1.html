@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button practice JS</title>
+</head>
+<body>
+	<button id="textchanger">change text</button>
+	<div id="firstdiv">This is some text</div>
+
+	<button id="textappend">click to append text</button>
+	<div id="seconddiv">Javascript is...</div>
+
+	<button id="textcreator">creat a list</button>
+	<div id="emptydiv"></div>
+
+	<script type="text/javascript">
+	document.getElementById("textchanger").onclick = function(){
+		document.getElementById("firstdiv").innerHTML = "The new some new text";
+	}
+
+	document.getElementById("textappend").onclick = function(){
+		document.getElementById("seconddiv").innerHTML = document.getElementById("seconddiv").innerHTML + " great!!";
+	}
+
+	document.getElementById("textcreator").onclick = function(){
+		document.getElementById("emptydiv").innerHTML = 
+		"<ul><li>Cat</li><li>Dog</li></ul>";
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+	<div id="firstdiv">This is some text here.</div>
+	<button id="button">Click me!</button>
+
+	<script type="text/javascript">
+
+	var array = new Array();
+
+	array[0] = "pizza";
+	array[1] = "kfc";
+
+	document.getElementById("button").onclick = function(){
+		document.getElementById("firstdiv").innerHTML = array[0];
+	}
+
+	</script>
+</body>
+</html>
