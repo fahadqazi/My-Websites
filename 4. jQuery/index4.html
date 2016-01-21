@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation using jQuery</title>
+	<script type="text/javascript" src="jQuery.min.js"></script>
+	<style type="text/css">
+	body{
+		font-family: verdana;
+	}
+	#circle{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background-color: green;
+		text-align: center;
+
+	}
+	span{
+		position: relative;
+		top:40px;
+	}
+	</style>
+</head>
+<body>
+	<div id="circle"><span>Name</span></div>
+
+	<script type="text/javascript">
+
+	$("#circle").click(function(){
+		$(this).animate({
+			backgroundColor:"red",
+			height:"200px",
+			width:"200px",
+			marginLeft:"100px",
+			marginTop:"100px"
+		},1000)
+	});
+
+	</script>
+</body>
+</html>
