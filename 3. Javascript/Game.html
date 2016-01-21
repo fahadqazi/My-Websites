@@ -3,6 +3,9 @@
 <head>
 	<title>Click Game</title>
 	<style type="text/css">
+	body{
+		font-family: verdana;
+	}
 	#box{
 		width: 100px;
 		height: 100px;
@@ -15,8 +18,9 @@
 	</style>
 </head>
 <body>
-
+	<h1>Test Your Reactions!</h1>
 	<p>Your time: <span id="time"></span></p>
+	<p>Fastest reaction so far: <span id="bestTime"></span></p>
 
 	<div id="box"></div>
 
@@ -47,8 +51,8 @@
 
 		createdTime = Date.now();
 
-		var top = Math.round(Math.random()*300);
-		var left = Math.round(Math.random()*300);
+		var top = Math.round(Math.random()*600);
+		var left = Math.round(Math.random()*600);
 
 		setTimeout(function(){
 
@@ -72,14 +76,15 @@
 		arrTime.push(reactionTime);
 		console.log(arrTime);
 
-		document.getElementById("time").innerHTML = reactionTime + " milliseconds";
+		document.getElementById("time").innerHTML = reactionTime + "s";
+		document.getElementById("bestTime").innerHTML = Math.min.apply(Math,arrTime)+"s";
 
 		this.style.display = "none";
 		makeBox();
 	}
 	makeBox();
 
-	
+
 	
 
 	</script>
