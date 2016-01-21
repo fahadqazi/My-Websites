@@ -8,11 +8,16 @@
 		height: 100px;
 		background-color: red;
 		display: none;
+		border-radius: 0%;
+		position: relative;
 	}
 	
 	</style>
 </head>
 <body>
+
+	<p>Your time: <span id="time"></span></p>
+
 	<div id="box"></div>
 
 
@@ -21,14 +26,38 @@
 
 	<script type="text/javascript">
 
-	var clickedTime; var createdTime; var reactionTime;
+	var clickedTime; var createdTime; var reactionTime; var arrTime=[];
+
+	function randomColor(){
+		var letters = '0123456789ABCDEF'.split('');
+		var color = '#';
+		for(i=0; i<6; i++){
+			color += letters[Math.round(Math.random()*15)];
+		}
+		return color;
+	}
+
+	function randomShape(){
+		var borRad = Math.round(Math.random()*100);
+		return borRad;
+	}
+	
 
 	function makeBox(){
 
 		createdTime = Date.now();
 
+		var top = Math.round(Math.random()*300);
+		var left = Math.round(Math.random()*300);
+
 		setTimeout(function(){
+
+			document.getElementById("box").style.top = top+"px";
+			document.getElementById("box").style.left = left+"px";
+			document.getElementById("box").style.backgroundColor = randomColor();
 			document.getElementById("box").style.display = "block";
+			document.getElementById("box").style.borderRadius = randomShape()+"%";
+
 		},Math.floor(Math.random()*6)*1000);
 	}
 
@@ -40,13 +69,17 @@
 
 		reactionTime = (clickedTime - createdTime)/1000;  //time in seconds
 
-		alert(reactionTime);
+		arrTime.push(reactionTime);
+		console.log(arrTime);
+
+		document.getElementById("time").innerHTML = reactionTime + " milliseconds";
 
 		this.style.display = "none";
 		makeBox();
 	}
 	makeBox();
 
+	
 	
 
 	</script>
