@@ -5,13 +5,7 @@
 	<script type="text/javascript" src="jQuery.min.js"></script>
 	<style type="text/css">
 
-	.square{
-		width: 100px;
-		height: 100px;
-		background-color: red;
-		margin: 5px;
-		/*float: left;*/
-	}
+	
 	#circle{
 		height: 100px;
 		width: 100px;
@@ -24,20 +18,24 @@
 </head>
 <body>
 	<div id="circle"></div>
-	<div class="square"></div>
-	<div class="square"></div>
+	<p>The is some text</p>
+
+	<iframe src="http://www.cnn.com"></iframe>
 	
 
 	<script type="text/javascript">
 
 	$("#circle").click(function(){
-		alert("circle clicked!");
+		$("p").html("Now you clicked & the text has changed");
+		// alert($("p").html());
 	});
+	$("#circle").hover(function(){
+		$("p").html("You hovered");
+	});
+	
 
 
-	$(".square").click(function(){
-		alert("square clicked");
-	});
+	
 
 	</script>
 </body>
