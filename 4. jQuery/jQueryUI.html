@@ -4,8 +4,37 @@
 	<title>jQuery UI</title>
 	<script type="text/javascript" src="jQuery.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js"></script>
+	<style type="text/css">
+	.square{
+		height: 200px;
+		width: 200px;
+	}
+
+	#red{
+		background-color: red;
+		float: left;
+	}
+	#green{
+		background-color: green;
+		float: right;
+	}
+	#orange{
+		background-color: orange;
+	}
+	.clear{
+		clear:both;
+	}
+	</style>
 </head>
 <body>
+	<div class="square" id="red"></div>
+	<div class="square" id="green"></div>
+	<div class="clear"></div>
+	<div class="square" id="orange"></div>
 
+	<script type="text/javascript">
+		$(".square").draggable();
+
+	</script>
 </body>
 </html>
