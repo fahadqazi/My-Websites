@@ -6,9 +6,7 @@
 	<style type="text/css">
 	#wrapper{
 	width: 600px;
-	/*height: 500px;*/
 	margin: 0 auto;
-	/*background-color: orange;*/
 	font-family: helvetica;
 	font-size: 1.2em;
 	}
@@ -88,7 +86,15 @@
 		errorMessage += "<br/> Your passwords dont match."
 	}
 
-	$("#error").html(errorMessage);
+	
+
+	if(errorMessage ==""){
+		alert("success");
+	}else{
+		$("#error").html(errorMessage);
+	}
+
+
 	});
 	</script>
 
