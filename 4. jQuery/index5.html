@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax</title>
+	<script type="text/javascript" src="jQuery.min.js"></script>
+</head>
+<body>
+
+	<h1>This is the index.html file</h1>
+
+	<script type="text/javascript">
+
+	//Not the preferred way to wirte AJAX
+	// $.get("test.html", function(data){
+	// 	alert(data);
+	// });
+
+	//Ajax alert showing cotent from another file, text.html
+	// $.ajax({
+	// 	url:"test.html"
+	// }).done(function(data){
+	// 	alert(data);
+	// });
+	
+	//Picking and changing the h1 element
+	// $.ajax({
+	// 	url:"test.html"
+	// }).done(function(data){
+	// 	$("h1").html(data);
+	// });
+
+	//Appending text from test.html file to h1 of index.html
+	$.ajax({
+		url:"test.html"
+	}).done(function(data){
+		$("h1").append(data);
+	});
+
+	</script>
+
+</body>
+</html>
