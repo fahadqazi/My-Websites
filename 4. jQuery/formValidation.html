@@ -50,10 +50,10 @@
 			<input name="phone" id="phone">
 
 			<label for="password">Password</label>
-			<input name="password" type="password">
+			<input name="password" type="password" id="pass1">
 
 			<label for="confirmpass">Confirm Password</label>
-			<input name="confirmpass" type="password">
+			<input name="confirmpass" type="password" id="pass2">
 
 			<input id="submitbutton" type="submit" value="Submit"/>
 
@@ -80,9 +80,15 @@
 	}
 
 	if(!$.isNumeric($("#phone").val()))  {
-		errorMessage = "Please enter a valid phone number";
+		errorMessage += "<br/>Please enter a valid phone number";
 	}
-		$("#error").html(errorMessage);
+		
+
+	if(!($("#pass1").val() === $("#pass2").val())){
+		errorMessage += "<br/> Your passwords dont match."
+	}
+
+	$("#error").html(errorMessage);
 	});
 	</script>
 
