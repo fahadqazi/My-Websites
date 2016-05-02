@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+h1{
+    background: url('googlelogo_color_272x92dp.png') top left no-repeat;
+    background-size: 100%;
+    text-indent: -9999px;
+    margin: 0 auto;
+}
